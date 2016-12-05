@@ -8,6 +8,7 @@
 #include <vector>
 #include <cstdarg>
 #include <string>
+#include <cstdio>
 using namespace std;
 
 //链表结点
