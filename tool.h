@@ -8,10 +8,9 @@
 #include <vector>
 #include <cstdarg>
 #include <string>
-#include <cstdio>
 using namespace std;
 
-//é“¾è¡¨ç»“ç‚¹
+//Á´±í½áµã
 struct ListNode
 {
     int val;
@@ -19,7 +18,7 @@ struct ListNode
     ListNode(int x) : val(x), next(NULL) {}
 };
 
-//æ ‘ç»“ç‚¹
+//Ê÷½áµã
 struct TreeNode 
 {
     int val;
@@ -28,28 +27,26 @@ struct TreeNode
     TreeNode(int x=0) : val(x), left(NULL), right(NULL) {}
 };
 
-//è¾“å‡ºæ™®é€šæ•°ç»„
-void ArrayPrint(int arr[], int count);
+//Êä³öÆÕÍ¨Êı×é
+void Print(int arr[], int count);
 
-//åˆ›å»ºå’Œè¾“å‡ºvector<int>
-vector<int> IntVectorCreate(int count, ...);
-void IntVectorPrint(const vector<int> &vec);
+//Êä³övector<int>
+void Print(const vector<int> &vec);
 
-//è¾“å‡ºvector< vector<int> >
-void IntVector2DPrint(const vector< vector<int> > &vec);
+//Êä³övector< vector<int> >
+void Print(const vector< vector<int> > &vec);
 
-//åˆ›å»ºå’Œè¾“å‡ºvector<string>ï¼Œä¸å®šå‚æ•°çš„ç±»å‹ä¸ºconst char*
-vector<string> StringVectorCreate(int count, ...);
-void StringVectorPrint(const vector<string> &vec);
+//´´½¨ºÍÊä³övector<string>
+void Print(const vector<string> &vec);
 
-//åˆ›å»ºï¼Œé”€æ¯ï¼Œè¾“å‡ºé“¾è¡¨
-ListNode *ListCreate(int count, ...);
+//´´½¨£¬Ïú»Ù£¬Êä³öÁ´±í
+ListNode *ListCreate(const vector<int> &vec);
 void DestroyList(ListNode *head);
-void ListPrint(ListNode *head);
+void Print(ListNode *head);
 
-//åˆ›å»ºï¼Œé”€æ¯ï¼Œè¾“å‡ºäºŒå‰æ ‘
-TreeNode *TreeCreate(int count, ...);
+//´´½¨£¬Ïú»Ù£¬Êä³ö¶ş²æÊ÷
+TreeNode *TreeCreate(const vector<int> &vec);
 void DestroyTree(TreeNode *root);
-void TreePrint(TreeNode *root);
+void Print(TreeNode *root);
 
 #endif

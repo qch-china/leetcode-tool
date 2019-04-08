@@ -26,33 +26,40 @@ int main()
 {
     cout << "array:" << endl;
     int arr[5] = { 1, 2, 3, 4, 5 };
-    ArrayPrint(arr, 5);
+    Print(arr, 5);
     cout << endl;
 
-    cout << "vector:" << endl;
-    vector<int> intVet = IntVectorCreate(5, 1, 2, 3, 4, 5);
-    IntVectorPrint(intVet);
+    cout << "int vector:" << endl;
+    vector<int> intVet = {1, 2, 3, 4, 5};
+    Print(intVet);
     cout << endl;
-
+	
     cout << "2D vector:" << endl;
-    vector< vector<int> > Int2DVec;
-    Int2DVec.resize(3);
-    Int2DVec[0] = IntVectorCreate(5, 11, 12, 13, 14, 15);
-    Int2DVec[1] = IntVectorCreate(5, 21, 22, 23, 24, 25);
-    Int2DVec[2] = IntVectorCreate(5, 31, 32, 33, 34, 35);
-    IntVector2DPrint(Int2DVec);
+    vector< vector<int> > Int2DVec = {
+        {11, 12, 13, 14, 15},
+        {21, 22, 23, 24, 25},
+        {31, 32, 33, 34, 35},
+    };
+    Print(Int2DVec);
     cout << endl;
-
+	
+	cout << "string vector:" << endl;
+	vector<string> stringVec = {"AAA", "BBB", "CCC", "DDD"};
+	Print(stringVec);
+    cout << endl;
+	
     cout << "list:" << endl;
-    ListNode *listHead = ListCreate(5, 1, 2, 3, 4, 5);
-    ListPrint(listHead);
+	vector<int> listVet = {1, 2, 3, 4, 5};
+    ListNode *listHead = ListCreate(listVet);
+    Print(listHead);
     DestroyList(listHead);
     cout << endl;
 
     cout << "tree:" << endl;
     //这里可能有点难理解，详情请见 readme.doc
-    TreeNode *tree = TreeCreate(9, 1, 2, 3, INT_MAX, INT_MAX, 4, INT_MAX, INT_MAX, 5);
-    TreePrint(tree);
+	vector<int> treeVec = {1, 2, 3, INT_MAX, INT_MAX, 4, INT_MAX, INT_MAX, 5};
+    TreeNode *tree = TreeCreate(treeVec);
+    Print(tree);
     DestroyTree(tree);
     cout << endl;
 
